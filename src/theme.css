@@ -1,0 +1,157 @@
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f0f0f0;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.8);
+  --navbar-text: rgba(80, 80, 80, 0.884);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-color: #f8f9fa;
+  --btn-primary-bg: linear-gradient(to right, #f87171, #ec4899);
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #e9ecef;
+  --btn-secondary-text: #212529;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #f8f9fa;
+  --text-secondary: #e9ecef;
+  --text-muted: #adb5bd;
+  --border-color: #495057;
+  --card-bg: #2d2d2d;
+  --navbar-bg: #1e1e1e;
+  --navbar-bg-scrolled: rgba(30, 30, 30, 0.8);
+  --navbar-text: #e9ecef;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-color: #2d2d2d;
+  --btn-primary-bg: linear-gradient(to right, #f87171, #ec4899);
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #495057;
+  --btn-secondary-text: #e9ecef;
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Styling */
+header {
+  background-color: var(--navbar-bg) !important;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: var(--navbar-bg-scrolled) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Navigation Links */
+header a {
+  color: var(--text-primary) !important;
+}
+
+header a:hover {
+  color: #f87171 !important;
+}
+
+/* Cards */
+.bg-white {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Standard text colors */
+.text-gray-600,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+/* Shadows */
+.shadow-md {
+  box-shadow: 0 4px 6px var(--shadow-color) !important;
+}
+
+/* Table Styling */
+table {
+  color: var(--text-primary);
+}
+
+table thead th {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--bg-primary) !important;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Buttons */
+button, .btn {
+  transition: all 0.3s ease;
+}
+
+/* Override specific Tailwind classes */
+.bg-gray-50 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.border-gray-200,
+.border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+
+/* Forms and inputs */
+input, select, textarea {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+/* Animations */
+.animate-spin {
+  border-color: var(--text-primary);
+}
